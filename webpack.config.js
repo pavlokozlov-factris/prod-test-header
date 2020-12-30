@@ -1,12 +1,14 @@
+const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 
 module.exports = (_, argv) => ({
   output: {
+    path: path.resolve(__dirname, 'build'),
     publicPath:
       argv.mode === "development"
         ? "http://localhost:8080/"
-        : "https://prod-test-header-nu.vercel.app/",
+        : "https://prod-test-header-nu.vercel.app/"
   },
 
   resolve: {
