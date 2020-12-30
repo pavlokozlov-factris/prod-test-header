@@ -54,6 +54,5 @@ module.exports = (_, argv) => ({
     splitChunks: {
       chunks: 'all',
     },
-    runtimeChunk: true,
   },
 });
