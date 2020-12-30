@@ -8,7 +8,8 @@ module.exports = (_, argv) => ({
     publicPath:
       argv.mode === "development"
         ? "http://localhost:8080/"
-        : "https://prod-test-header-nu.vercel.app/"
+        : "https://prod-test-header-nu.vercel.app/",
+    filename: '[name].[chunkhash].js'
   },
 
   resolve: {
@@ -49,4 +50,10 @@ module.exports = (_, argv) => ({
       template: "./src/index.html",
     }),
   ],
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+    runtimeChunk: true,
+  },
 });
