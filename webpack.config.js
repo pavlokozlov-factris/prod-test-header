@@ -9,7 +9,7 @@ module.exports = (_, argv) => ({
       argv.mode === "development"
         ? "http://localhost:8080/"
         : "https://prod-test-header.herokuapp.com/",
-    filename: '[name].[chunkhash].js'
+    // filename: '[name].[chunkhash].js'
   },
 
   resolve: {
@@ -50,9 +50,9 @@ module.exports = (_, argv) => ({
       template: "./src/index.html",
     }),
   ],
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
-  },
+  // optimization: {
+  //   splitChunks: {
+  //     chunks: 'all',
+  //   },
+  // },
 });
