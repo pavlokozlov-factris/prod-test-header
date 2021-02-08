@@ -10,6 +10,6 @@ export default () => (
       fontWeight: "bold",
     }}
   >
-    Header 1.0
+    Header 1.1
   </div>
 );
